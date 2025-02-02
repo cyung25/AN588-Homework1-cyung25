@@ -1,0 +1,121 @@
+---
+title: "Homework 1 Code"
+author: "Charles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## this is my homework 1 code
+## Lines 12-22 are Challenge 1
+## Lines 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library (stringr)
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.”"
+words <- str_split_1(sentence, "\\s+")[[1]]
+words_clean <- gsub ("[[:punct:]]","",words)
+length (words_clean)
+if (length(words_clean) >=3)
+{third_words <- words_clean[seq(3, length(words_clean), by = 3)]} 
+{third_words <- character (0)  }
+third_words
+
+#PEER COMMENTARY NOTE:When I ran this code I did not get every 3rd word I got "chatacter (0)", On line 16, you don't need the [[1]], and you don't need lines 18 and 19, it should work after removing those!
+m <- matrix (1:100, nrow=10, ncol = 10)
+x_columns <- m[, c(2,3,6)]
+x_rows <- m[6:8, ]
+xrange <- m[2:6,9:2]
+x_columns
+x_rows
+```
+#Peer Commentary: For the Matrix it should benrow=8
+### Challenge 2 output
+     [,1] [,2] [,3]
+ [1,]   11   21   51
+ [2,]   12   22   52
+ [3,]   13   23   53
+ [4,]   14   24   54
+ [5,]   15   25   55
+ [6,]   16   26   56
+ [7,]   17   27   57
+ [8,]   18   28   58
+ [9,]   19   29   59
+[10,]   20   30   60
+> x_rows
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+[1,]    6   16   26   36   46   56   66   76   86
+[2,]    7   17   27   37   47   57   67   77   87
+[3,]    8   18   28   38   48   58   68   78   88
+     [,10]
+[1,]    96
+[2,]    97
+[3,]    98
+
+##Challenge 3 codes:
+## Outputs lsited here:
+## [1] 300, [1] 364 264 164  64,
+## [,1] [,2] [,3] [,4] [,5]
+## [1,]  150  145  140  135  130
+## [2,]  149  144  139  134  129
+## [3,]  148  143  138  133  128
+## [4,]  147  142  137  132  127
+## [5,]  146  141  136  131  126
+
+```{r}
+x <- array (400:1, dim = c(5,5,4,4))
+x [1,1,1,2]
+x [2,3,2, ]
+x [1:5, 1:5, 3, 3]
+
+```
+
+## Challenge 4 Codes:
+use character vectors
+List and C
+Str for view
+print is easy to read
+```{r}
+primate_taxonomy <- list(Primates = list(Haplorhini = list(Anthropoidea = list(Platyrrhini = c("Cebidae", "Atelidae", "Pitheciidae"), Catarrhini = c("Cercopithecidae", "Hylobatidae", "Hominidae")), Tarsioidea = c("Tarsiidae")),Strepsirhini = list(Lorisoidea = c("Lorisidae", "Galagidae"),Lemuroidea = c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae"))))
+str(primate_taxonomy)
+print(primate_taxonomy)
+```
+## Challenge 5 
+
+```{r}
+df <- as.data.frame(matrix(
+  c(3, 0, 1, 
+    23, 1, 2, 
+    33, 1, 1, 
+    42, 0, 1, 
+    41, 0, 2), 
+  nrow = 5, 
+  byrow = TRUE
+))
+df [[2]] <- as.logical(df[[2]])
+df [[3]] <- as.factor(df[[3]])
+str(df)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+#PEER COMMENTARY: This looks really good! Looking at your code helped me understand each challenge better and also how to make things look nice on html!
