@@ -1,0 +1,125 @@
+---
+title: "Homework 1 Code"
+author: "Charles"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## this is my homework 1 code
+## Lines 12-22 are Challenge 1
+## Lines 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library (stringr)
+sentence <- "Stately, plump Buck Mulligan came from the stairhead, bearing a bowl of lather on which a mirror and a razor lay crossed.”"
+words <- str_split_1(sentence, "\\s+")
+words_clean <- gsub ("[[:punct:]]","",words)
+{third_words <- words_clean[seq(3, length(words_clean), by = 3)]} 
+{third_words <- character (0)  }
+third_words
+```
+
+```{r}
+m <- matrix (1:80, nrow=8, ncol = 10)
+x_columns <- m[, c(2,3,6)]
+x_rows <- m[6:8, ]
+xrange <- m[2:6,9:2]
+x_columns
+x_rows
+```
+
+### Challenge 2 output
+     [,1] [,2] [,3]
+ [1,]   11   21   51
+ [2,]   12   22   52
+ [3,]   13   23   53
+ [4,]   14   24   54
+ [5,]   15   25   55
+ [6,]   16   26   56
+ [7,]   17   27   57
+ [8,]   18   28   58
+ [9,]   19   29   59
+[10,]   20   30   60
+> x_rows
+     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
+[1,]    6   16   26   36   46   56   66   76   86
+[2,]    7   17   27   37   47   57   67   77   87
+[3,]    8   18   28   38   48   58   68   78   88
+     [,10]
+[1,]    96
+[2,]    97
+[3,]    98
+
+##Challenge 3 codes:
+## Outputs lsited here:
+## [1] 300, [1] 364 264 164  64,
+## [,1] [,2] [,3] [,4] [,5]
+## [1,]  150  145  140  135  130
+## [2,]  149  144  139  134  129
+## [3,]  148  143  138  133  128
+## [4,]  147  142  137  132  127
+## [5,]  146  141  136  131  126
+
+```{r}
+x <- array (400:1, dim = c(5,5,4,4))
+x [1,1,1,2]
+x [2,3,2, ]
+x [1:5, 1:5, 3, 3]
+
+```
+
+## Challenge 4 Codes:
+use character vectors
+List and C
+Str for view
+print is easy to read
+```{r}
+primate_taxonomy <- list(Primates = list(Haplorhini = list(Anthropoidea = list(Platyrrhini = c("Cebidae", "Atelidae", "Pitheciidae"), Catarrhini = c("Cercopithecidae", "Hylobatidae", "Hominidae")), Tarsioidea = c("Tarsiidae")),Strepsirhini = list(Lorisoidea = c("Lorisidae", "Galagidae"),Lemuroidea = c("Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae"))))
+str(primate_taxonomy)
+print(primate_taxonomy)
+```
+## Challenge 5 
+
+```{r}
+df <- as.data.frame(matrix(
+  c(3, 0, 1, 
+    23, 1, 2, 
+    33, 1, 1, 
+    42, 0, 1, 
+    41, 0, 2), 
+  nrow = 5, 
+  byrow = TRUE
+))
+df [[2]] <- as.logical(df[[2]])
+df [[3]] <- as.factor(df[[3]])
+str(df)
+```
+## Challenge 1: It was quite difficult to learn how to push things between R and Github (I still struggle currently with this). The main issue was that I'm not super familiar with the R and Github interfaces yet but I am constantly getting more comfortable with them which is good. 
+
+## Challenge 2: When I was trying to save my files or push them to GitHub from R I kept misplacing them for random reasons so it took a while to find them and save them to places I wanted to upload. This is just because I am new to the software.
+
+## Challenge 3: My first couple attempts coding I ended up making a lot of careless typos which resulted in multiple tries to get my code to run. Trying to type simpler instructions and paying more attention to patterns and how to connect commands was very helpful. 
+
+## Challenge 4: Familiarizing myself with learning how to make repos on GitHub was also a challenge since this was my first time using GitHub. I ended up making many test repos and files to help with this. 
+
+## Challenge 5: Cleaning up code to get the first challenge to run was difficult because I was used to running vector code with numbers. It was a little confusing at first to code the different words in the specific orientations. 
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
