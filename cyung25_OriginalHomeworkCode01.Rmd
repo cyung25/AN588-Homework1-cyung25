@@ -94,23 +94,13 @@ df [[2]] <- as.logical(df[[2]])
 df [[3]] <- as.factor(df[[3]])
 str(df)
 ```
+## Challenge 1: It was quite difficult to learn how to push things between R and Github (I still struggle currently with this). The main issue was that I'm not super familiar with the R and Github interfaces yet but I am constantly getting more comfortable with them which is good. 
 
-## R Markdown
+## Challenge 2: When I was trying to save my files or push them to GitHub from R I kept misplacing them for random reasons so it took a while to find them and save them to places I wanted to upload. This is just because I am new to the software.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Challenge 3: My first couple attempts coding I ended up making a lot of careless typos which resulted in multiple tries to get my code to run. Trying to type simpler instructions and paying more attention to patterns and how to connect commands was very helpful. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Challenge 4: Familiarizing myself with learning how to make repos on GitHub was also a challenge since this was my first time using GitHub. I ended up making many test repos and files to help with this. 
 
-```{r cars}
-summary(cars)
-```
+## Challenge 5: Cleaning up code to get the first challenge to run was difficult because I was used to running vector code with numbers. It was a little confusing at first to code the different words in the specific orientations. 
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
